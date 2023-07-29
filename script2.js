@@ -40,6 +40,7 @@ function generateAccessToken() {
   
   // Function to handle user logout
   function handleLogout() {
+    console.log("inside handel")
     localStorage.removeItem('user');
     window.location.href = 'index.html';
   }
@@ -71,13 +72,11 @@ function generateAccessToken() {
     }
   }
   
-  // Event listeners
-  if(window.location.pathname === '/login-form/'){
-      document.getElementById('signupForm').addEventListener('submit', handleSignup);
-      console.log("index in");
 
-  }
-//   document.getElementById('logoutBtn').addEventListener('click', handleLogout);
+    if (!window.location.pathname.includes('profile.html')) {
+        // checkLogin();
+        document.getElementById('signupForm').addEventListener('submit', handleSignup);
+    }
   
   // Check login status when the Profile page loads
   if (window.location.pathname.includes('profile.html')) {
