@@ -72,7 +72,7 @@ function generateAccessToken() {
   }
   
   // Event listeners
-  if(window.location.pathname === '/index.html'){
+  if(window.location.pathname === '/login-form/'){
       document.getElementById('signupForm').addEventListener('submit', handleSignup);
       console.log("index in");
 
